@@ -12,8 +12,8 @@ class CagnolinoController extends Controller
       $cagnolini = Cagnolino::all();
       return view('home', compact('cagnolini'));
     }
-    public function show($id){
+    public function showCagnolino($id){
       $cagnolino = Cagnolino::findOrFail($id);
-      return view('showCagnolino', compact('cagnolino'));
+      return view('show', compact('cagnolino'));
     }
 }

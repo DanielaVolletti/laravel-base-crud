@@ -1,6 +1,6 @@
 @extends('mainLayout')
 @section('content')
-  <div class="">
+  <div class="cagnolino">
     <h2>Nome: {{$cagnolino['nome']}}</h2>
     <h2>tipo: {{$cagnolino['tipo']}}</h2>
     <h2>Altezza: {{$cagnolino['altezza']}} cm</h2>
