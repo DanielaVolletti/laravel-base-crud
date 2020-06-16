@@ -11,6 +11,12 @@ header {
 
 main {
   height: calc(100vh - 40vh);
+  padding: 20px;
+  ul {
+    li {
+      list-style-type: none;
+    }
+  }
 }
 
 footer {

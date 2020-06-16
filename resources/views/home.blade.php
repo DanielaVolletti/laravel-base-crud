@@ -1,6 +1,6 @@
 @extends('mainLayout')
 @section('content')
-
+<h1>Lista cagnolini: </h1>
 <ul>
   @foreach ($cagnolini as $cagnolino)
     <li>

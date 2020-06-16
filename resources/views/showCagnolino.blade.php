@@ -1,9 +1,9 @@
 @extends('mainLayout')
 @section('content')
   <div class="">
-    <h1>Nome: {{$cagnolino['nome']}}</h1>
-    <h1>tipo: {{$cagnolino['tipo']}}</h1>
-    <h1>Altezza: {{$cagnolino['altezza']}}</h1>
-    <h1>Peso: {{$cagnolino['peso']}}</h1>
+    <h2>Nome: {{$cagnolino['nome']}}</h2>
+    <h2>tipo: {{$cagnolino['tipo']}}</h2>
+    <h2>Altezza: {{$cagnolino['altezza']}} cm</h2>
+    <h2>Peso: {{$cagnolino['peso']}} kg</h2>
   </div>
 @endsection
