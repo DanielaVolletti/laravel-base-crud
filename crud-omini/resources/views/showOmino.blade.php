@@ -10,4 +10,8 @@
       <li><b>Role:</b> {{$omino['role']}}</li>
     </ul>
   </div>
+  <div class="">
+    <a href="{{route('edit', $omino['id'])}}">Edit</a>
+    <a href="{{route('destroy', $omino['id'])}}">Delete</a>
+  </div>
 @endsection
