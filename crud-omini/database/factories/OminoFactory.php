@@ -13,6 +13,6 @@ $factory->define(Omino::class, function (Faker $faker) {
         'code' => $faker -> postcode(),
         'state' => $faker -> state(),
         'phoneNumber' => $faker -> e164PhoneNumber(),
-        'role' => $faker -> randomElement($array = array ('CHEF','INGEGNERE ENERGETICO','ASSISTENTE DI DIREZIONE', 'INFERMIERE', 'SVILUPPATORE WEB', 'DESIGNER INDUSTRIALE', 'COMMERCIALISTA', 'CAMERIERE DI SALA', 'PROJECT MANAGER', 'STORE MANAGER', 'CONTABILE', 'AREA MANAGER'))
+        'role' => $faker -> randomElement($array = array ('chef','ingegnere energetico','assistente di direzione', 'infermiere', 'sviluppatore web', 'designer industriale', 'commercialista', 'cameriere di sala', 'project manager', 'store manager', 'contabile', 'area manager'))
     ];
 });
