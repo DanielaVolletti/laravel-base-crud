@@ -43,4 +43,21 @@ class OminiController extends Controller
       return redirect() -> route('home');
     }
 
+    public function create() {
+      return view('create-omino');
+    }
+
+    public function store(Request $request) {
+      $data = $request -> all();
+      $omino = new Omino;
+      $omino -> firstName = $data['firstName'];
+      $omino -> lastName = $data['lastName'];
+      $omino -> address = $data['address'];
+      $omino -> code = $data['code'];
+      $omino -> state = $data['state'];
+      $omino -> phoneNumber = $data['phoneNumber'];
+      $omino -> role = $data['role'];
+      $omino -> save();
+      return redirect() -> route('home');
+    }
 }

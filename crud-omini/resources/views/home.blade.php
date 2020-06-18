@@ -2,6 +2,7 @@
 
 @section('content')
   <h1>LISTA OMINI</h1>
+  <a href="{{route('create')}}">AGGIUNGI UN OMINO</a>
   <ul>
     @foreach ($omini as $omino)
       <li>
