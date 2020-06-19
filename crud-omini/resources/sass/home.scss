@@ -1,0 +1,30 @@
+#home {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 50px;
+  .lista {
+    h1 {
+      font-size: 30px;
+      color: darkcyan;
+      padding-bottom: 20px;
+    }
+    ul {
+      padding-bottom: 50px;
+      li {
+        list-style-type: circle;
+        font-size: 18px;
+      }
+    }
+  }
+  .create {
+    a {
+      background: darkcyan;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 25px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.container-omino {
+  align-self: center;
+  font-size: 20px;
+  border: solid 1px grey;
+  padding: 30px;
+  border-radius: 10px;
+  .info-omino {
+    ul {
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+  .edit-destroy {
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    a {
+      color: white;
+      padding: 10px 25px;
+      border-radius: 5px;
+      &:first-child {
+        background: cadetblue;
+      }
+      &:last-child {
+        background: darkred;
+      }
+    }
+  }
+}

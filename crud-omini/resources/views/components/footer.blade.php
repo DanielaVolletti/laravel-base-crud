@@ -1,3 +1,3 @@
-<div class="">
-  Sono footer
-</div>
+<h1 class="">
+  FOOTER
+</h1>

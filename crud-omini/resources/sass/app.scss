@@ -1,7 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+header,
+footer {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
 header {
-  background: red;
+  background: gold;
 }
 
 footer {
-  background: yellow;
+  background: seagreen;
+}
+
+main {
+  height: calc(100vh - 140px);
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  & * a {
+    text-decoration: none;
+  }
+  @import 'home';
+  @import 'show-omino';
+  @import 'edit-create-omino';
 }
