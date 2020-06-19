@@ -1,6 +1,15 @@
 @extends('layouts.main-layout')
 @section('content')
   <div class="container-form">
+    @if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+    @endif
     <form class="" action="{{route('update', $omino['id'])}}" method="post">
       @csrf
       @method('POST')

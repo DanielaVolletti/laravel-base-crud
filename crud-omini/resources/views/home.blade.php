@@ -3,6 +3,9 @@
 @section('content')
   <div id="home">
     <div class="lista">
+      @if (session('success'))
+        <h1 class="validator">{{session('success')}}</h1>
+      @endif
       <h1>LISTA OMINI: </h1>
       <ul>
         @foreach ($omini as $omino)

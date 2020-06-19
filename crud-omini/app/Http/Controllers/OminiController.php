@@ -21,7 +21,9 @@ class OminiController extends Controller
     public function delete($id) {
       $omino = Omino::findOrFail($id);
       $omino -> delete();
-      return redirect() -> route('home');
+      return redirect() -> route('home')
+                        -> withSuccess('Eliminazione di ' . $omino['firstName'] . ' ' . $omino['lastName'] . ' avvenuta con successo!');
+
     }
 
     public function edit($id) {
@@ -30,7 +32,15 @@ class OminiController extends Controller
     }
 
     public function update(Request $request, $id) {
-      $data = $request -> all();
+      $data = $request->validate([
+        'firstName' => 'required',
+        'lastName' => 'required',
+        'address' => 'required',
+        'code' => 'required|numeric|integer',
+        'state' => 'required',
+        'phoneNumber' => 'required',
+        'role' => 'required'
+      ]);
       $omino = Omino::findOrFail($id);
       $omino -> firstName = $data['firstName'];
       $omino -> lastName = $data['lastName'];
@@ -40,7 +50,8 @@ class OminiController extends Controller
       $omino -> phoneNumber = $data['phoneNumber'];
       $omino -> role = $data['role'];
       $omino -> save();
-      return redirect() -> route('home');
+      return redirect() -> route('home')
+                        -> withSuccess('Modifica di ' . $omino['firstName'] . ' ' . $omino['lastName'] . ' avvenuta con successo!');
     }
 
     public function create() {
@@ -48,7 +59,15 @@ class OminiController extends Controller
     }
 
     public function store(Request $request) {
-      $data = $request -> all();
+      $data = $request->validate([
+        'firstName' => 'required',
+        'lastName' => 'required',
+        'address' => 'required',
+        'code' => 'required|numeric|integer',
+        'state' => 'required',
+        'phoneNumber' => 'required',
+        'role' => 'required'
+      ]);
       $omino = new Omino;
       $omino -> firstName = $data['firstName'];
       $omino -> lastName = $data['lastName'];
@@ -58,6 +77,7 @@ class OminiController extends Controller
       $omino -> phoneNumber = $data['phoneNumber'];
       $omino -> role = $data['role'];
       $omino -> save();
-      return redirect() -> route('home');
+      return redirect() -> route('home')
+        -> withSuccess('Creazione di ' . $omino['firstName'] . ' ' . $omino['lastName'] . ' avvenuta con successo!');
     }
 }

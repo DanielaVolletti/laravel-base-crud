@@ -49,13 +49,17 @@ main #home .lista h1 {
   padding-bottom: 20px;
 }
 
+main #home .lista .validator {
+  color: blue;
+}
+
 main #home .lista ul {
   padding-bottom: 50px;
 }
 
 main #home .lista ul li {
   list-style-type: circle;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 main #home .create a {
@@ -101,31 +105,36 @@ main .container-omino .edit-destroy a:last-child {
 
 main .container-form {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-main .container-form label,
-main .container-form input {
+main .container-form form {
+  padding-top: 20px;
+}
+
+main .container-form form label,
+main .container-form form input {
   font-size: 18px;
 }
 
-main .container-form label {
+main .container-form form label {
   display: inline-block;
   width: 160px;
   padding-bottom: 10px;
   font-weight: bold;
 }
 
-main .container-form input {
+main .container-form form input {
   padding: 5px;
 }
 
-main .container-form .submit {
+main .container-form form .submit {
   display: flex;
   justify-content: center;
 }
 
-main .container-form .submit button {
+main .container-form form .submit button {
   background: teal;
   color: white;
   padding: 20px 40px;
